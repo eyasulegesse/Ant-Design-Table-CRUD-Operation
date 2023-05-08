@@ -1,22 +1,17 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
-
+import { Spin, Button } from 'antd';
+import { UserAddOutlined, LockOutlined } from '@ant-design/icons';
+import Login from './components/login';
+import TableComponent from './components/table';
+import IconComponent from './components/icon';
+import TableCrud from './components/tableCrud';
 function App() {
+  const [loading, setLoading] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='App'>
+      <header className='App-header'>
+        <TableCrud />
       </header>
     </div>
   );
